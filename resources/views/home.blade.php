@@ -39,7 +39,7 @@
                 <td>
                     <img src="{{URL::asset('/images/pizzas.png')}}" width="200" height="150" alt="pizzas" >
                     <br>
-                    <a href="" class="btn btn-warning">GESTIONAR PIZZAS</a>
+                    <a href="{{ route('pizzas.index') }}" class="btn btn-warning">GESTIONAR PIZZAS</a>
                 </td>
             </tr>
             <tr>
