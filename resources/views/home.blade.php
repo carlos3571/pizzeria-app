@@ -51,7 +51,7 @@
                 <td>
                     <img src="{{URL::asset('/images/ingredientes.png')}}" width="200" height="150" alt="ingredientes" >
                     <br>
-                    <a href="" class="btn btn-danger">GESTIONAR INGREDIENTES</a>
+                    <a href="{{ route('ingredients.index') }}" class="btn btn-danger">GESTIONAR INGREDIENTES</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
