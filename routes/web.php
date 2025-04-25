@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BranchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\PizzaController;
@@ -29,3 +30,10 @@ Route::get('/suppliers/create', [SupplierController::class, 'create'])->name('su
 Route::delete('/suppliers/{supplier}', [SupplierController::class, 'destroy'])->name('suppliers.destroy');
 Route::put('/suppliers/{supplier}', [SupplierController::class, 'update'])->name('suppliers.update');
 Route::get('/suppliers/{supplier}/edit', [SupplierController::class, 'edit'])->name('suppliers.edit');
+
+Route::get('/branchs', [BranchController::class, 'index'])->name('branchs.index');
+Route::post('/branchs', [BranchController::class, 'store'])->name('branchs.store');
+Route::get('/branchs/create', [BranchController::class, 'create'])->name('branchs.create');
+Route::delete('/branchs/{branch}', [BranchController::class, 'destroy'])->name('branchs.destroy');
+Route::put('/branchs/{branch}', [BranchController::class, 'update'])->name('branchs.update');
+Route::get('/branchs/{branch}/edit', [BranchController::class, 'edit'])->name('branchs.edit');

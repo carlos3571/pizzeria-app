@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Branch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BranchController extends Controller
 {
@@ -12,6 +14,10 @@ class BranchController extends Controller
     public function index()
     {
         //
+        $branchs = DB::table('branches')
+        ->get();
+
+        return view('branch.index', ['branchs' => $branchs]);
     }
 
     /**
@@ -20,6 +26,11 @@ class BranchController extends Controller
     public function create()
     {
         //
+        $branchs = DB::table('branches')
+        ->orderBy('name')
+        ->get();
+
+        return view('branch.new', ['branchs'=>$branchs]);
     }
 
     /**
@@ -28,6 +39,15 @@ class BranchController extends Controller
     public function store(Request $request)
     {
         //
+        $branch = new Branch();
+        $branch->name = $request->branch;
+        $branch->address = $request->address;
+        $branch->save();
+
+        $branchs = DB::table('branches')
+        ->get();
+
+        return view('branch.index', ['branchs' => $branchs]);
     }
 
     /**
@@ -44,6 +64,13 @@ class BranchController extends Controller
     public function edit(string $id)
     {
         //
+        $branch = Branch::find($id);
+
+        $branchs = DB::table('branches')
+        ->orderBy('name')
+        ->get();
+
+        return view('branch.edit', ['branch'=>$branch, 'branchs'=>$branchs]);
     }
 
     /**
@@ -52,6 +79,16 @@ class BranchController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $branch = Branch::find($id);
+
+        $branch->name = $request->branch;
+        $branch->address = $request->address;
+        $branch->save();
+
+        $branchs = DB::table('branches')
+        ->get();
+
+        return view('branch.index', ['branchs'=>$branchs]);
     }
 
     /**
@@ -60,5 +97,12 @@ class BranchController extends Controller
     public function destroy(string $id)
     {
         //
+        $branch = Branch::find($id);
+        $branch->delete();
+
+        $branchs = DB::table('branches')
+        ->get();
+
+        return view('branch.index', ['branchs'=>$branchs]);
     }
 }

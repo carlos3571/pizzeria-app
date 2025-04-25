@@ -81,9 +81,9 @@
                     <a href="" class="btn btn-secondary">GESTIONAR ORDEN INGREDIENTE EXTRA</a>
                 </td>
                 <td>
-                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="sucursales" >
+                    <img src="{{URL::asset('/images/sucursales.png')}}" width="200" height="150" alt="sucursales" >
                     <br>
-                    <a href="" class="btn btn-secondary">GESTIONAR SUCURSALES</a>
+                    <a href="{{ route('branchs.index') }}" class="btn btn-info">GESTIONAR SUCURSALES</a>
                 </td>
             </tr>
             <tr>
