@@ -22,19 +22,19 @@
         <table class="table mx-auto">
             <tr>
                 <td>
-                    <img src="{{URL::asset('/images/usuarios.png')}}" width="200" height="150" alt="usuarios" >
+                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="usuarios" >
                     <br>
-                    <a href="" class="btn btn-primary">GESTIONAR USUARIOS</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR USUARIOS</a>
                 </td>
                 <td>
-                    <img src="{{URL::asset('/images/clientes.png')}}" width="200" height="150" alt="clientes" >
+                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="clientes" >
                     <br>
-                    <a href="" class="btn btn-success">GESTIONAR CLIENTES</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR CLIENTES</a>
                 </td>
                 <td>
-                    <img src="{{URL::asset('/images/empleados.png')}}" width="200" height="150" alt="empleados" >
+                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="empleados" >
                     <br>
-                    <a href="" class="btn btn-danger">GESTIONAR EMPLEADOS</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR EMPLEADOS</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/pizzas.png')}}" width="200" height="150" alt="pizzas" >
@@ -44,9 +44,9 @@
             </tr>
             <tr>
                 <td>
-                    <img src="{{URL::asset('/images/tamanos.png')}}" width="200" height="150" alt="tamaños" >
+                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="tamaños" >
                     <br>
-                    <a href="" class="btn btn-warning">GESTIONAR TAMAÑOS DE PIZZAS</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR TAMAÑOS DE PIZZAS</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/ingredientes.png')}}" width="200" height="150" alt="ingredientes" >
@@ -56,56 +56,56 @@
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-success">GESTIONAR INGREDIENTES DE PIZZA</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR INGREDIENTES DE PIZZA</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-primary">GESTIONAR INGREDIENTES EXTRA</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR INGREDIENTES EXTRA</a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="{{URL::asset('/images/orden.png')}}" width="200" height="150" alt="ordenes" >
+                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="ordenes" >
                     <br>
-                    <a href="" class="btn btn-primary">GESTIONAR ORDENES</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR ORDENES</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-success">GESTIONAR ORDENES DE PIZZAS</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR ORDENES DE PIZZAS</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-danger">GESTIONAR ORDEN INGREDIENTE EXTRA</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR ORDEN INGREDIENTE EXTRA</a>
                 </td>
                 <td>
-                    <img src="{{URL::asset('/images/sucursales.png')}}" width="200" height="150" alt="sucursales" >
+                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="sucursales" >
                     <br>
-                    <a href="" class="btn btn-warning">GESTIONAR SUCURSALES</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR SUCURSALES</a>
                 </td>
             </tr>
             <tr>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-primary">GESTIONAR PROVEEDORES</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR PROVEEDORES</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-primary">GESTIONAR MATERIAS PRIMAS</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR MATERIAS PRIMAS</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-primary">GESTIONAR COMPRAS</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR COMPRAS</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-primary">GESTIONAR MATERIAS PRIMAS PIZZA</a>
+                    <a href="" class="btn btn-secondary">GESTIONAR MATERIAS PRIMAS PIZZA</a>
                 </td>
             </tr>
         </table>
