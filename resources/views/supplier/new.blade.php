@@ -9,36 +9,31 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Adicionar una Comuna</title>
+    <title>Adicionar Proveedor</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Adicionar una Comuna</h1>
+        <h1>Adicionar Proveedor</h1>
 
-        <form method="POST" action="{{ route('comunas.store') }}">
+        <form method="POST" action="{{ route('suppliers.store') }}">
             @csrf
             <div class="mb-3">
                 <label for="id" class="form-label">Codigo:</label>
                 <input type="text" class="form-control" id="id" aria-describedby="idHelp" name="id" disabled="disable">
-                <div id="idHelp" class="form-text">Codigo de Comuna.</div>
+                <div id="idHelp" class="form-text">Codigo de Proveedor.</div>
             </div>
             <div class="mb-3">
-                <label for="comuna" class="form-label">Comuna:</label>
-                <input type="text" required class="form-control" id="comuna" aria-describedby="comunaHelp" name="comuna" placeholder="Nombre de Comuna.">
+                <label for="supplier" class="form-label">Proveedor:</label>
+                <input type="text" required class="form-control" id="supplier" aria-describedby="supplierHelp" name="supplier" placeholder="Nombre del Proveedor.">
             </div>
             <div class="mb-3">
-                <label for="municipio" class="form-label">Municipio:</label>
-                <select class="form-select" id="municipio" name="municipio" required>
-                    <option selected disabled value="">Selecione un Municipio ...</option>
-                    @foreach ($municipios as $municipio)
-                        <option value="{{ $municipio->muni_codi }}">{{ $municipio->muni_nomb }}</option>
-                    @endforeach
-                </select>
+                <label for="contact_info" class="form-label">Contacto de Proveedor:</label>
+                <input type="text" required class="form-control" id="contact_info" aria-describedby="contact_infoHelp" name="contact_info" placeholder="Contacto del Proveedor.">
             </div>
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">GUARDAR</button>
-                <a href="{{ route('comunas.index') }}" class="btn btn-warning">CANCELAR</a>
+                <a href="{{ route('suppliers.index') }}" class="btn btn-warning">CANCELAR</a>
             </div>
         </form>
     </div>

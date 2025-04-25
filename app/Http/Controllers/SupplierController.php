@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Supplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SupplierController extends Controller
 {
@@ -12,6 +14,10 @@ class SupplierController extends Controller
     public function index()
     {
         //
+        $suppliers = DB::table('suppliers')
+        ->get();
+
+        return view('supplier.index', ['suppliers' => $suppliers]);
     }
 
     /**
@@ -20,6 +26,11 @@ class SupplierController extends Controller
     public function create()
     {
         //
+        $suppliers = DB::table('suppliers')
+        ->orderBy('name')
+        ->get();
+
+        return view('supplier.new', ['suppliers'=>$suppliers]);
     }
 
     /**
@@ -28,6 +39,15 @@ class SupplierController extends Controller
     public function store(Request $request)
     {
         //
+        $supplier = new Supplier();
+        $supplier->name = $request->supplier;
+        $supplier->contact_info = $request->contact_info;
+        $supplier->save();
+
+        $suppliers = DB::table('suppliers')
+        ->get();
+
+        return view('supplier.index', ['suppliers' => $suppliers]);
     }
 
     /**
@@ -44,6 +64,13 @@ class SupplierController extends Controller
     public function edit(string $id)
     {
         //
+        $supplier = Supplier::find($id);
+
+        $suppliers = DB::table('suppliers')
+        ->orderBy('name')
+        ->get();
+
+        return view('supplier.edit', ['supplier'=>$supplier, 'suppliers'=>$suppliers]);
     }
 
     /**
@@ -52,6 +79,16 @@ class SupplierController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $supplier = Supplier::find($id);
+
+        $supplier->name = $request->supplier;
+        $supplier->contact_info = $request->contact_info;
+        $supplier->save();
+
+        $suppliers = DB::table('suppliers')
+        ->get();
+
+        return view('supplier.index', ['suppliers'=>$suppliers]);
     }
 
     /**
@@ -60,5 +97,12 @@ class SupplierController extends Controller
     public function destroy(string $id)
     {
         //
+        $supplier = Supplier::find($id);
+        $supplier->delete();
+
+        $suppliers = DB::table('suppliers')
+        ->get();
+
+        return view('supplier.index', ['suppliers'=>$suppliers]);
     }
 }

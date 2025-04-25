@@ -8,33 +8,33 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Listado de Comunas</title>
+    <title>Listado de Proveedores</title>
   </head>
   <body>
 
   <div class="container">
 
-    <h1>Listado de Comunas</h1>
-    <a href="{{ route('comunas.create') }}" class="btn btn-success">ADICIONAR COMUNA</a>
+    <h1>Listado de Proveedores</h1>
+    <a href="{{ route('suppliers.create') }}" class="btn btn-success">ADICIONAR PROVEEDOR</a>
+    <a href="{{ route('index') }}" class="btn btn-warning">REGRESAR</a>
 
     <table class="table">
   <thead>
     <tr>
       <th scope="col">CODIGO</th>
-      <th scope="col">COMUNA</th>
-      <th scope="col">MUNICIPIO</th>
-      <th scope="col">ACCION</th>
+      <th scope="col">PROVEEDOR</th>
+      <th scope="col">CONTACTO</th>
     </tr>
   </thead>
   <tbody>
-    @foreach ($comunas as $comuna)
+    @foreach ($suppliers as $supplier)
     <tr>
-      <th scope="row">{{ $comuna->comu_codi }}</th>
-      <td>{{ $comuna->comu_nomb }}</td>
-      <td>{{ $comuna->muni_nomb }}</td>
+      <th scope="row">{{ $supplier->id }}</th>
+      <td>{{ $supplier->name }}</td>
+      <td>{{ $supplier->contact_info }}</td>
       <td>
-        <a href="{{ route('comunas.edit', ['comuna' => $comuna->comu_codi]) }}" class="btn btn-info">EDITAR</a>
-        <form action=" {{ route('comunas.destroy', ['comuna' => $comuna->comu_codi]) }} " method="POST" style="display: inline-block">
+        <a href="{{ route('suppliers.edit', ['supplier' => $supplier->id]) }}" class="btn btn-info">EDITAR</a>
+        <form action=" {{ route('suppliers.destroy', ['supplier' => $supplier->id]) }} " method="POST" style="display: inline-block">
             @method('delete')
             @csrf
             <input class="btn btn-danger" type="submit" value="ELIMINAR">

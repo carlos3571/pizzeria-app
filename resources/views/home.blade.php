@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Pizeria</title>
+    <title>Pizzeria</title>
 </head>
 
 <body>
@@ -88,9 +88,9 @@
             </tr>
             <tr>
                 <td>
-                    <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
+                    <img src="{{URL::asset('/images/proveedores.png')}}" width="200" height="150" alt="marco" >
                     <br>
-                    <a href="" class="btn btn-secondary">GESTIONAR PROVEEDORES</a>
+                    <a href="{{ route('suppliers.index') }}" class="btn btn-success">GESTIONAR PROVEEDORES</a>
                 </td>
                 <td>
                     <img src="{{URL::asset('/images/marco.png')}}" width="200" height="150" alt="marco" >
